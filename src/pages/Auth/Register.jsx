@@ -2,8 +2,11 @@ import React,{useRef, useState} from 'react'
 import { auth } from '../../config/Firebase';
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { authActions } from '../../redux/AuthSlice';
 function Register() {
   let [isProcess,setProcess] = useState(false);
+  let dispatch = useDispatch()
   let navigate = useNavigate();
     let emailElement = useRef();
     let passElement = useRef();
@@ -18,6 +21,7 @@ function Register() {
                 const user = userCredential.user;
                 // ...
                 window.toastify('Your are signin','success')
+                dispatch(authActions.login())
                 navigate('/')
               })
               .catch((error) => {

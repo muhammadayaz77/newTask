@@ -9,6 +9,8 @@ function Index() {
     <Routes>
         <Route path='/*' element={<Frontend />} />
         <Route path='/auth/*' element={<Auth/>} />
+        
+
     </Routes>
     </BrowserRouter>
     </>

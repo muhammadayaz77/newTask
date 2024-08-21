@@ -40,8 +40,9 @@ function Header() {
         <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
           <input type="search" className="form-control" placeholder="Search..." aria-label="Search" />
         </form>
-        
+        {!isAuth ? 
         <Link to='/auth/login' className='btn btn-primary me-3'>Login</Link>
+         :
         <div className="dropdown text-end">
           <a href="#" className="d-block link-body-emphasis text-decoration-none dropdown-toggle show" data-bs-toggle="dropdown" aria-expanded="true">
             <img src="../public/MuhammadAyaz.jpeg" alt="mdo" width="32" height="32" className="rounded-circle" />
@@ -55,6 +56,7 @@ function Header() {
           </ul>
         </div>
         
+      }
       
       </div>
     </div>
