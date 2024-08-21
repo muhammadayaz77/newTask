@@ -16,13 +16,13 @@ function Home() {
         <div className="col-12 mb-3">
           <AddTodo></AddTodo>
         </div>
-        <div className="col-4">
+        <div className="col-lg-4 col-md-6 mb-3">
          <Todo></Todo>
         </div>
-        <div className="col-4">
+        <div className="col-lg-4 col-md-6 mb-3">
         <Progress></Progress>
         </div>
-        <div className="col-4 ">
+        <div className="col-lg-4 col-md-6">
         <Complete></Complete>
         </div>
       </div>
